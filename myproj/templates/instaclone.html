@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Clone</title>
+</head>
+<style>
+    :root{
+        --main-color: #0095f6;
+        --text-color: #262626;
+        --background-color: rgb(250, 250, 250);
+        --border-color: 219, 219, 219;
+        --footer-text-color: rgb(00, 55, 107);}
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-size: 14px;}
+
+    body{
+        background-color: var(--background-color);
+        display: flex;
+        flex-direction: column;}
+
+    #content-container{
+        display: flex;
+        align-items: center;
+        margin: 64px auto 0;
+        padding-bottom: 64px;}
+    
+    .phones{margin: 0 20px;}
+
+    .user{
+        margin: 12px 0 0;
+        top: .45px;}
+
+    .login-container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;}
+    .login-container,.signup-container{
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgba(var(--border-color),1);
+        margin-bottom: 10px;
+        padding: 10px 0;}
+
+    .instagram-logo-box{
+        width: 175px;
+        margin: 22px 86.5px 0;}
+    .instagram-logo{height: 51px;}
+
+    #login-post{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 24px;}
+
+    .inputs-container{
+        margin: 0 40px 6px;
+        width: 100%;}
+    .inputs-container input{
+        width: 100%;
+        padding: 9px 0 7px 8px;
+        border: 1px solid rgb(var(--border-color),1);
+        border-radius: 2px;}
+    .inputs-container input:focus{border-color: rgb(180, 180, 180);}
+
+    .login-button{
+        background-color: rgb(178,223,252);
+        color: rgb(255,255,255);
+        font-weight: bold;
+        padding: 8px;
+		text-decoration: none;
+        border-radius: 4px;
+        text-align: center;
+        width: 94%;
+        margin: 8px 40px;
+        box-sizing: content-box;}
+    .login-button:hover{background-color: var(--main-color);}
+      
+    .or-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        margin: 10px 40px 18px;
+        width: 100%;}
+    
+    .line{
+        background-color: rgb(var(--border-color));
+        height: 1px;
+        position: relative;
+        top: .45em;}
+        
+    .or{
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;
+        color: rgb(114, 114, 114);}
+    
+    .facebook-container{
+        text-align: center;
+        margin: 8px 40px;}
+          
+    .facebook-logo{
+        width: 16px;
+        margin-right: 8px;}
+          
+    .facebook-login{
+        color: rgb(56, 81, 133);
+        font-weight: 600;
+		text-decoration: none;}
+
+    .password-forgot{
+        color: var(--footer-text-color);
+        text-align: center;
+        font-size: 12px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+		text-decoration: none;}
+              
+    .signup-container p,.get-container p{
+        color: var(--text-color);}
+    .signup-container p{
+        margin: 15px;
+        text-align: center;}
+            
+    .signup{
+        color: var(--main-color);
+        font-weight: 600;
+		text-decoration: none;}
+	.get-container{
+		display: flex;
+		flex-direction: column;
+		height: 102px;
+		width: 350px;}
+	  
+	.get-container p{
+		margin: 10px 20px;
+		box-sizing: content-box;
+		text-align: center;}
+	  
+	.download-container{
+		display: flex;
+		justify-content: center;
+		margin: 10px;}
+	  
+	.download-appstore{
+		margin-right: 3px;}
+	  
+	.appstore,.googleplay{
+		height: 40px;
+    
+		margin: 3px;
+		width: 136px;}
+
+	.page-footer{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		padding: 0 20px;}
+	
+	.links-container,.footer-span-container{margin-bottom: 20px;}
+	.links-list{text-align: center;}
+	.links-list li{display: inline-block;}
+	.links-list li a{
+	  	color: var(--footer-text-color);
+	  	font-size: 12px;
+	  	font-weight: 600;
+	  	margin: 0 16px 7px 0;
+	  	text-decoration: none;}
+	
+	.footer-span{
+	  color: rgba(142,142,142,1);
+	  font-size: 12px;
+	  margin: 20px 0;
+	  top: .1em;}
+</style>
+<body>
+
+  <div id="content-container">
+
+    <!--Phone picture section-->
+    <section class="phones">
+      <img src="https://media.gcflearnfree.org/content/633d944b3823fb02e84dce55_10_05_2022/Screen%20Shot%202022-10-10%20at%202.28.19%20PM.png" alt="pictures on phone">
+    </section>
+
+    <!--User's log in section-->
+    <section class="user">
+
+      <div class="login-container">
+
+        <!--Instagram Logo-->
+        <div class="instagram-logo-box">
+          <img class="instagram-logo" src="https://raw.githubusercontent.com/leocosta1/instagram-clone/f698a2b8d63d15d824aa26e78f3c0db27f4fdc33/assets/logo.svg">
+        </div>
+
+        <!--Form Login-->
+        <form id="login-post">
+          <div class="inputs-container">
+            <input type="text" name="username" placeholder="Phone number, username or email">
+          </div>
+          <div class="inputs-container">
+            <input type="password" name="password" placeholder="Password">
+          </div>
+          <a class="login-button" href="#" target="_blank">Log In</a>
+
+          <div class="or-container">
+            <div class="line"></div>
+            <div class="or">OR</div>
+            <div class="line"></div>
+          </div>
+
+          <!--Facebook login-->
+          <div class="facebook-container">
+            <a class="facebook-login" href="#" target="_blank"><img class="facebook-logo"
+                src="https://raw.githubusercontent.com/yurimutti/instagram-login-page/058ed9e7358fd1330956d29953b87621d934a98b/assets/img/facebook.svg">Log in
+              with Facebook</a>
+          </div>
+        </form>
+
+        <!--Password recovery-->
+        <a class="password-forgot" href="#" target="_blank">Forgot password?</a>
+      </div>
+
+      <!--Sign up-->
+      <div class="signup-container">
+        <p>Don't have an account? <a class="signup" href="#" target="_blank">Sign up</a></p>
+      </div>
+
+      <!--App's download-->
+      <div class="get-container">
+        <p>Get the app from.</p>
+        <div class="download-container">
+			<a class="download-googleplay" href="#" target="_blank"><img class="googleplay"
+				src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png"></a>
+			<a class="download-appstore" href="#" target="_blank"><img class="appstore"
+              src="https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png"></a>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <footer class="page-footer">
+
+    <div class="links-container">
+      <ul class="links-list">
+        <li>
+          <a class="link" href="#" target="_blank">ABOUT</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">PRESS</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">API</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">JOBS</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">PRIVACY</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">TERMS</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">LOCATIONS</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">TOP ACCOUNTS</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">HASHTAGS</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">LANGUAGE</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-span-container">
+      <span class="footer-span">
+        © 2023 INSTAGRAM FROM META
+      </span>
+    </div>
+  </footer>
+</body>
+
+</html>
