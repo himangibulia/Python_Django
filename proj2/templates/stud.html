@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>ADDRESS</th>
+            <th>PIN CODE</th>
+            <th>MOBILE NO.</th>
+        </tr>
+
+        {% for i in d%}
+        <tr>
+            <td>{{i.username}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.pin_code}}</td>
+            <td>{{i.mobile_no}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
